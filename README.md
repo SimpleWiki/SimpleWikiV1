@@ -1,4 +1,4 @@
-# SimpleWiki V3
+# SimpleWiki V2
 
 Une plateforme wiki collaborative moderne construite avec Next.js, React, TailwindCSS et Prisma.
 
