@@ -5,7 +5,7 @@ import { Navbar } from '@/components/Navbar'
 import { Footer } from '@/components/Footer'
 
 export const metadata: Metadata = {
-  title: 'SimpleWiki V3',
+  title: 'SimpleWiki V2',
   description: 'A modern collaborative wiki platform',
 }
 

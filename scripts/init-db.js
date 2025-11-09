@@ -153,7 +153,7 @@ async function main() {
     update: {},
     create: {
       key: 'site_name',
-      value: 'SimpleWiki V3',
+      value: 'SimpleWiki V2',
     },
   })
 
