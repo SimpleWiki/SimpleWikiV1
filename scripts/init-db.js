@@ -1,10 +1,21 @@
 const { PrismaClient } = require('@prisma/client')
 const bcrypt = require('bcryptjs')
+const { execSync } = require('child_process')
 
 const prisma = new PrismaClient()
 
 async function main() {
   console.log('🚀 Initialisation de la base de données...')
+
+  // Push database schema first
+  console.log('📦 Création des tables de la base de données...')
+  try {
+    execSync('npx prisma db push --accept-data-loss', { stdio: 'inherit' })
+    console.log('✅ Tables créées')
+  } catch (error) {
+    console.error('❌ Erreur lors de la création des tables:', error.message)
+    process.exit(1)
+  }
 
   // Create default roles
   console.log('📝 Création des rôles par défaut...')
